@@ -1,0 +1,41 @@
+packetbeat.interfaces.device: any
+packetbeat.flows:
+  timeout: 30s
+  period: 10s
+
+packetbeat.protocols:
+- type: icmp
+  enabled: true
+
+- type: dhcpv4
+  ports: [67, 68]
+
+- type: dns
+  ports: [53]
+
+- type: http
+  ports: [80, 8080, 8000, 5000, 8002, 9200]
+
+- type: tls
+  ports:
+    - 443
+    - 9243
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression
+
+setup.kibana:
+  host: "http://kb-01:5601"
+
+#cloud.id:
+#cloud.auth:
+
+output.elasticsearch:
+  hosts: [ "es-01:9200", "es-02:9200", "es-03:9200",]
+
+processors:
+  - add_host_metadata: ~
+  # - add_cloud_metadata: ~
+  # - add_docker_metadata: ~
+  # - add_kubernetes_metadata: ~

@@ -1,0 +1,24 @@
+heartbeat.config.monitors:
+  path: ${path.config}/monitors.d/*.yml
+  reload.enabled: true
+  reload.period: 5s
+
+heartbeat.monitors:
+- type: http
+  id: elasticsearch-api-monitor
+  name: Elasticsearch API Monitor
+  urls: [ "http://es-01:9200", "http://es-02:9200", "http://es-03:9200" ]
+  schedule: '@every 10s'
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression
+
+#cloud.id:
+#cloud.auth:
+
+output.elasticsearch:
+  hosts: [ "es-01:9200", "es-02:9200", "es-03:9200",]
+
+processors:
+  - add_observer_metadata:
