@@ -1,0 +1,9 @@
+cluster.name: elastic-stack-cookbook
+node.name: es-03
+network.host: _site_
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+discovery.seed_hosts: [ "es-01", "es-02", "es-03" ]
+cluster.initial_master_nodes: [ "es-01", "es-02", "es-03" ]
+bootstrap.memory_lock: true
+

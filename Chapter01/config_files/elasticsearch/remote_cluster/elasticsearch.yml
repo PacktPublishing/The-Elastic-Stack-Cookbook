@@ -1,0 +1,8 @@
+cluster.name: elastic-stack-cookbook-monitoring
+node.name: es-rm-01
+network.host: _site_
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+discovery.seed_hosts: [ "es-rm-01" ]
+cluster.initial_master_nodes: [ "es-rm-01" ]
+bootstrap.memory_lock: true
