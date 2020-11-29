@@ -1,0 +1,118 @@
+# First we will set the polling interval to 1 second for this demonstration
+PUT _cluster/settings
+{
+  "transient": {
+    "indices.lifecycle.poll_interval": "1s"
+  }
+}
+
+# Now we'll define a policy to rollover the index if it's 10 seconds old or greater than or equal to 10 docs in size, and delete if it's 30 seconds old
+PUT _ilm/policy/elastic_stack_cookbook_test_policy
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "actions": {
+          "rollover": {
+            "max_docs": 10,
+            "max_age": "10s"
+          }
+        }
+      },
+      "delete": {
+        "min_age": "30s",
+        "actions": {
+          "delete": {}
+        }
+      }
+    }
+  }
+}
+
+# Define a template for the indices to hook into ILM
+PUT _template/elastic_stack_cookbook_test_template
+{
+  "index_patterns": ["elastic_stack_cookbook_test-*"],
+  "settings": {
+    "index.lifecycle.name": "elastic_stack_cookbook_test_policy",
+    "index.lifecycle.rollover_alias": "elastic_stack_cookbook_test_friendly_alias_endpoint"
+  }
+}
+
+# Create the first index
+PUT elastic_stack_cookbook_test-000001
+{
+  "aliases": {
+    "elastic_stack_cookbook_test_friendly_alias_endpoint": {
+      "is_write_index": true
+    }
+  }
+}
+
+# Refresh and see the index is created
+POST elastic_stack_cookbook_test_friendly_alias_endpoint/_refresh
+GET _cat/indices?v&index=elastic_stack_cookbook_test*
+
+# You can see the settings of the index behind the alias
+GET elastic_stack_cookbook_test_friendly_alias_endpoint
+
+# Now we will index 10 documents via the alias
+POST elastic_stack_cookbook_test_friendly_alias_endpoint/_bulk
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+
+# Check indices
+GET _cat/indices?v&index=elastic_stack_cookbook_test*
+
+# Index 3 documents via the alias
+POST elastic_stack_cookbook_test_friendly_alias_endpoint/_bulk
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+{ "index" : { "_index" : "elastic_stack_cookbook_test_friendly_alias_endpoint" } }
+{ "message" : "some_payload" }
+
+# Refresh the index and view the indices again
+POST elastic_stack_cookbook_test_friendly_alias_endpoint/_refresh
+GET _cat/indices?v&index=elastic_stack_cookbook_test*
+
+# Keep hitting this over 30 seconds and watch the oldest index delete, and eventually, the rest of them
+GET _cat/indices?v&index=elastic_stack_cookbook_test*
+
+# CLEANING UP
+
+# Delete any existing ILM indices and stop the policy being applied (NB does not delete the policy itself)
+DELETE elastic_stack_cookbook_test-00000*
+
+# Delete the template
+DELETE _template/elastic_stack_cookbook_test_template
+
+# Delete the policy
+DELETE _ilm/policy/elastic_stack_cookbook_test_policy
+
+# Reset polling interval to the default 10 minutes
+PUT _cluster/settings
+{
+  "transient": {
+    "indices.lifecycle.poll_interval": "10m"
+  }
+}
