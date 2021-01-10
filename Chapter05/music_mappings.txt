@@ -1,0 +1,30 @@
+PUT musicians
+{
+  "mappings": {
+    "properties": {
+      "artist.name": {
+        "type": "keyword"
+      },
+      "artist.genre": {
+        "type": "keyword"
+      },
+      "artist.number_of_albums": {
+        "type": "short"
+      },
+      "artist.date_of_birth": {
+        "type": "date",
+        "format": "yyyy/MM/dd"
+      },
+      "artist.date_of_death": {
+        "type": "date",
+        "format": "yyyy/MM/dd"
+      },
+      "artist.birth_town.name": {
+        "type": "keyword"
+      },
+      "artist.birth_town.location": {
+        "type": "geo_point"
+      }
+    }
+  }
+}

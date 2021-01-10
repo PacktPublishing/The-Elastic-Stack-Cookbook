@@ -1,0 +1,83 @@
+POST _bulk
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Nina Simone", "artist.genre": "Jazz", "artist.number_of_albums": 33, "artist.date_of_birth": "1933/02/21", "artist.date_of_death": "2003/04/21", "artist.birth_town.name": "Tryon", "artist.birth_town.location": "35.20832748118482, -82.23630669511735" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Louis Armstrong", "artist.genre": "Jazz", "artist.number_of_albums": 33, "artist.date_of_birth": "1901/08/04", "artist.date_of_death": "1971/07/06", "artist.birth_town.name": "New Orleans", "artist.birth_town.location": "29.95, -90.08" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "John Lee Hooker", "artist.genre": "Blues", "artist.number_of_albums": 14, "artist.date_of_birth": "1912/08/22", "artist.date_of_death": "2001/06/21", "artist.birth_town.name": "Tutwiler", "artist.birth_town.location": "34.014722,-90.431667" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Etta James", "artist.genre": "Blues", "artist.number_of_albums": 29, "artist.date_of_birth": "1938/01/25", "artist.date_of_death": "2012/01/20", "artist.birth_town.name": "Los Angeles", "artist.birth_town.location": "34.0544363460628, -118.2511272531753" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Esbjörn Svensson", "artist.genre": "Jazz", "artist.number_of_albums": 15, "artist.date_of_birth": "1964/04/16", "artist.date_of_death": "2008/06/14", "artist.birth_town.name": "Skultuna", "artist.birth_town.location": "59.717929, 16.428731" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Patti Smith", "artist.genre": "Rock", "artist.number_of_albums": 11, "artist.date_of_birth": "1946/12/30", "artist.birth_town.name": "Deptford Township", "artist.birth_town.location": "39.813794,-75.118693" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "David Bowie", "artist.genre": "Rock", "artist.number_of_albums": 26, "artist.date_of_birth": "1947/01/18", "artist.date_of_death": "2016/01/10", "artist.birth_town.name": "London", "artist.birth_town.location": "51.4615, -0.11504" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Mick Jagger", "artist.genre": "Rock", "artist.number_of_albums": 41, "artist.date_of_birth": "1943/07/26", "artist.birth_town.name": "Dartford", "artist.birth_town.location": "51.45188, 0.21556" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Amy Winehouse", "artist.genre": "Jazz", "artist.number_of_albums": 3, "artist.date_of_birth": "1983/09/13", "artist.date_of_death": "2011/07/23", "artist.birth_town.name": "London", "artist.birth_town.location": "51.6316, -0.1265" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Joni Mitchell", "artist.genre": "Folk", "artist.number_of_albums": 19, "artist.date_of_birth": "1943/11/07", "artist.birth_town.name": "Fort Macleod", "artist.birth_town.location": "49.725583, -113.397528" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Janis Joplin", "artist.genre": "Rock", "artist.number_of_albums": 4, "artist.date_of_birth": "1943/01/19", "artist.date_of_death": "1970/10/04", "artist.birth_town.name": "Port Arthur", "artist.birth_town.location": "29.885, -93.94" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Jim Morrison", "artist.genre": "Rock", "artist.number_of_albums": 7, "artist.date_of_birth": "1943/12/08", "artist.date_of_death": "1971/070/03", "artist.birth_town.name": "Melbourne", "artist.birth_town.location": "28.116667, -80.633333" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Kurt Cobain", "artist.genre": "Rock", "artist.number_of_albums": 5, "artist.date_of_birth": "1967/02/20", "artist.date_of_death": "1994/04/05", "artist.birth_town.name": "Aberdeen", "artist.birth_town.location": "46.975833, -123.818611" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Anthony Kiedis", "artist.genre": "Rock", "artist.number_of_albums": 11, "artist.date_of_birth": "1962/11/01", "artist.birth_town.name": "Grand Rapids", "artist.birth_town.location": "42.961111, -85.655556" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Courtney Love", "artist.genre": "Rock", "artist.number_of_albums": 5, "artist.date_of_birth": "1964/07/09", "artist.birth_town.name": "San Francisco", "artist.birth_town.location": "37.7775, -122.416389" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Dave Grohl", "artist.genre": "Rock", "artist.number_of_albums": 29, "artist.date_of_birth": "1969/01/14", "artist.birth_town.name": "Warren", "artist.birth_town.location": "41.238333, -80.814444" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Jamie Cullum", "artist.genre": "Jazz", "artist.number_of_albums": 9, "artist.date_of_birth": "1979/08/20", "artist.birth_town.name": "Rochford", "artist.birth_town.location": "51.5821, 0.7065" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Van Morrison", "artist.genre": "Soul", "artist.number_of_albums": 41, "artist.date_of_birth": "1945/08/31", "artist.birth_town.name": "Belfast", "artist.birth_town.location": "54.594, -5.898" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Kylie Minogue", "artist.genre": "Pop", "artist.number_of_albums": 15, "artist.date_of_birth": "1968/05/28", "artist.birth_town.name": "Melbourne", "artist.birth_town.location": "-37.813611, 144.963056" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Mory Kanté", "artist.genre": "World", "artist.number_of_albums": 12, "artist.date_of_birth": "1950/03/29", "artist.date_of_death": "2020/05/22", "artist.birth_town.name": "Albadaria", "birth_town.location": "9.55, -10.1" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Ravi Shankar", "artist.genre": "Indian Classical", "artist.number_of_albums": 76, "artist.date_of_birth": "1920/04/07", "artist.date_of_death": "2012/12/11", "artist.birth_town.name": "Varanasi", "artist.birth_town.location": "25.318889, 83.012778" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Adele", "artist.genre": "Pop", "artist.number_of_albums": 3, "artist.date_of_birth": "1988/05/05", "artist.birth_town.name": "London", "artist.birth_town.location": "51.427025, -0.095539" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Ariana Grande", "artist.genre": "Pop", "artist.number_of_albums": 6, "artist.date_of_birth": "1993/06/26", "artist.birth_town.name": "Boca Raton", "artist.birth_town.location": "26.368611, -80.1" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Johnny Hallyday", "artist.genre": "Rock", "artist.number_of_albums": 80, "artist.date_of_birth": "1943/06/15", "artist.date_of_death": "2017/12/05", "artist.birth_town.name": "Paris", "artist.birth_town.location": "48.878281, 2.336967" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Jimi Hendrix", "artist.genre": "Rock", "artist.number_of_albums": 4, "artist.date_of_birth": "1942/11/27", "artist.date_of_death": "1970/09/18", "artist.birth_town.name": "Seattle", "artist.birth_town.location": "47.609722, -122.333056" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Chuck Berry", "artist.genre": "Rock", "artist.number_of_albums": 32, "artist.date_of_birth": "1926/10/18", "artist.date_of_death": "2017/03/18", "artist.birth_town.name": "St Louis", "artist.birth_town.location": "38.627222, -90.197778" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Tina Turner", "artist.genre": "Rock", "artist.number_of_albums": 10, "artist.date_of_birth": "1939/11/26", "artist.birth_town.name": "Nutbush", "artist.birth_town.location": "35.698056, -89.408056" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Billie Eilish", "artist.genre": "Pop", "artist.number_of_albums": 2, "artist.date_of_birth": "2001/12/18", "artist.birth_town.name": "Los Angeles", "artist.birth_town.location": "34.05, -118.25" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "", "artist.genre": "Lorde", "artist.number_of_albums": 2, "artist.date_of_birth": "1996/11/07", "artist.birth_town.name": "Auckland", "artist.birth_town.location": "-36.840556, 174.74" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Sia", "artist.genre": "Pop", "artist.number_of_albums": 17, "artist.date_of_birth": "1975/12/18", "artist.birth_town.name": "Adelaide", "artist.birth_town.location": "-34.928889, 138.601111" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Madonna", "artist.genre": "Pop", "artist.number_of_albums": 19, "artist.date_of_birth": "1958/08/16", "artist.birth_town.name": "Bay City", "artist.birth_town.location": "43.595, -83.888611" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Björk", "artist.genre": "Alternative", "artist.number_of_albums": 9, "artist.date_of_birth": "1965/11/21", "artist.birth_town.name": "Reykjavik", "artist.birth_town.location": "64.1475, -21.935" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Dusty Springfield", "artist.genre": "Pop", "artist.number_of_albums": 14, "artist.date_of_birth": "1939/04/16", "artist.date_of_death": "1999/03/02", "artist.birth_town.name": "London", "artist.birth_town.location": "51.5543, -0.1888" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Bobby Womack", "artist.genre": "Soul", "artist.number_of_albums": 30, "artist.date_of_birth": "1944/03/04", "artist.date_of_death": "2014/06/27", "artist.birth_town.name": "Cleveland", "artist.birth_town.location": "41.482222, -81.669722" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Curtis Mayfield", "artist.genre": "Soul", "artist.number_of_albums": 22, "artist.date_of_birth": "1942/06/03", "artist.date_of_death": "1999/12/26", "artist.birth_town.name": "Chicago", "artist.birth_town.location": "41.808611, -87.888889" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Herbie Hancock", "artist.genre": "Jazz", "artist.number_of_albums": 53, "artist.date_of_birth": "1940/04/12", "artist.birth_town.name": "Chicago", "artist.birth_town.location": "41.78, -87.6" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "James Brown", "artist.genre": "Soul", "artist.number_of_albums": 76, "artist.date_of_birth": "1933/05/03", "artist.date_of_death": "2006/12/25", "artist.birth_town.name": "Barnwell", "artist.birth_town.location": "33.244444, -81.363333" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Marlena Shaw", "artist.genre": "Soul", "artist.number_of_albums": 17, "artist.date_of_birth": "1942/09/02", "artist.birth_town.name": "New York", "artist.birth_town.location": "40.908611, -73.781944" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Beth Orton", "artist.genre": "Alternative", "artist.number_of_albums": 7, "artist.date_of_birth": "1970/12/14", "artist.birth_town.name": "East Dereham", "artist.birth_town.location": "52.681, 0.94" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Tori Amos", "artist.genre": "Alternative", "artist.number_of_albums": 17, "artist.date_of_birth": "1963/08/22", "artist.birth_town.name": "Newton", "artist.birth_town.location": "35.665, -81.224444" }
+{ "index" : { "_index" : "musicians" } }
+{ "artist.name" : "Tracy Chapman", "artist.genre": "Folk", "artist.number_of_albums": 8, "artist.date_of_birth": "1964/03/30", "artist.birth_town.name": "Cleveland", "artist.birth_town.location": "41.48, -81.669" }
